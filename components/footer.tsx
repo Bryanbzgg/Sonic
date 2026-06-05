@@ -54,7 +54,11 @@ export default function Footer() {
             © {new Date().getFullYear()} Javep Chevrolet. Todos os direitos reservados.
           </p>
         </motion.div>
+
+        
       </div>
+
+      
     </footer>
   )
 }
