@@ -49,11 +49,11 @@ export default function Header() {
             {/* Logo */}
             <Link href="#inicio" className="flex items-center">
               <Image
-                src="/placeholder-logo.png"
+                src="/logo-dark.png"
                 alt="Javep Chevrolet"
                 width={160}
                 height={50}
-                className="h-14 w-auto"
+                className="h-25 w-auto"
               />
             </Link>
 
