@@ -1,0 +1,54 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { InstagramIcon } from './icons'
+
+const INSTAGRAM_URL = 'https://www.instagram.com/chevroletjavep'
+
+export default function Footer() {
+  return (
+    <footer className="bg-foreground py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center text-center"
+        >
+          {/* Logo */}
+          <div className="text-2xl font-bold tracking-tight mb-6">
+            <span className="text-primary">JAVEP</span>
+            <span className="text-background/60 ml-1 text-sm font-normal">Chevrolet</span>
+          </div>
+
+          {/* Consultant Info */}
+          <div className="mb-6">
+            <p className="text-background font-semibold">Bryan</p>
+            <p className="text-background/60 text-sm">Consultor de Vendas</p>
+          </div>
+
+          {/* Social Link */}
+          <Link
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-background/60 hover:text-primary transition-colors mb-8"
+          >
+            <InstagramIcon size={20} />
+            <span className="text-sm">@chevroletjavep</span>
+          </Link>
+
+          {/* Divider */}
+          <div className="w-full max-w-md h-px bg-background/10 mb-6" />
+
+          {/* Copyright */}
+          <p className="text-background/40 text-sm">
+            © {new Date().getFullYear()} Javep Chevrolet. Todos os direitos reservados.
+          </p>
+        </motion.div>
+      </div>
+    </footer>
+  )
+}
