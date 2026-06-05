@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { InstagramIcon } from './icons'
 
 const INSTAGRAM_URL = 'https://www.instagram.com/chevroletjavep'
@@ -18,9 +19,14 @@ export default function Footer() {
           className="flex flex-col items-center text-center"
         >
           {/* Logo */}
-          <div className="text-2xl font-bold tracking-tight mb-6">
-            <span className="text-primary">JAVEP</span>
-            <span className="text-background/60 ml-1 text-sm font-normal">Chevrolet</span>
+          <div className="mb-6">
+            <Image
+              src="/placeholder-logo.png"
+              alt="Javep Chevrolet"
+              width={120}
+              height={40}
+              className="h-10 w-auto brightness-[0.85]"
+            />
           </div>
 
           {/* Consultant Info */}

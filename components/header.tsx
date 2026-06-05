@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const WHATSAPP_NUMBER = '551421047005'
 const WHATSAPP_MESSAGE = 'Olá Bryan, vi a página do Novo Chevrolet Sonic e gostaria de mais informações.'
@@ -47,10 +48,13 @@ export default function Header() {
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <Link href="#inicio" className="flex items-center">
-              <div className="text-2xl font-bold tracking-tight">
-                <span className="text-primary">JAVEP</span>
-                <span className="text-muted-foreground ml-1 text-sm font-normal">Chevrolet</span>
-              </div>
+              <Image
+                src="/placeholder-logo.png"
+                alt="Javep Chevrolet"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
