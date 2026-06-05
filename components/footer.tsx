@@ -23,8 +23,8 @@ export default function Footer() {
             <Image
               src="/placeholder-logo.png"
               alt="Javep Chevrolet"
-              width={160}
-              height={50}
+              width={256}
+              height={80}
               className="h-16 w-auto brightness-[0.85]"
             />
           </div>
