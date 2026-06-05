@@ -13,15 +13,15 @@ import 'swiper/css/pagination'
 import 'swiper/css/effect-fade'
 
 const galleryImages = [
-  { src: '/images/sonic-front.png', alt: 'Frente', label: 'Vista Frontal' },
-  { src: '/images/sonic-rear.png', alt: 'Traseira', label: 'Vista Traseira' },
-  { src: '/images/sonic-side.png', alt: 'Lateral', label: 'Perfil Lateral' },
-  { src: '/images/sonic-wheel.png', alt: 'Rodas', label: 'Rodas de Liga Leve' },
-  { src: '/images/sonic-interior.png', alt: 'Interior', label: 'Interior Premium' },
-  { src: '/images/sonic-dashboard.png', alt: 'Painel', label: 'Painel de Instrumentos' },
-  { src: '/images/sonic-multimedia.png', alt: 'Multimídia', label: 'Central Multimídia' },
-  { src: '/images/sonic-seats.png', alt: 'Bancos', label: 'Bancos em Couro' },
-  { src: '/images/sonic-trunk.png', alt: 'Porta-malas', label: 'Porta-malas Espaçoso' },
+  { src: '/images/sonic-front.png', alt: 'Lateral', label: 'Vista Lateral' },
+  { src: '/images/sonic-rear.png', alt: 'Chevrolet Sonic visto de frente em perspectiva aérea', label: 'Vista Aérea Frontal' },
+  { src: '/images/sonic-side.png', alt: 'Bancos dianteiros do Chevrolet Sonic', label: 'Bancos Dianteiros' },
+  { src: '/images/sonic-wheel.png', alt: 'Chevrolet Sonic em movimento na estrada', label: 'Design em Movimento' },
+  { src: '/images/sonic-interior.png', alt: 'Traseira do Chevrolet Sonic', label: 'Vista Traseira' },
+  { src: '/images/sonic-dashboard.png', alt: 'Painel de instrumentos do Chevrolet Sonic', label: 'Painel de Instrumentos' },
+  { src: '/images/sonic-multimedia.png', alt: 'Chevrolet Sonic visto por trás em perspectiva aérea', label: 'Vista Traseira Aérea' },
+  { src: '/images/sonic-seats.png', alt: 'Painel do Chevrolet Sonic', label: 'Painel Digital' },
+  { src: '/images/sonic-trunk.png', alt: 'Frente do Chevrolet Sonic', label: 'Vista Frontal' },
 ]
 
 export default function GallerySection() {
