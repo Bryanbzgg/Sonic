@@ -25,7 +25,7 @@ export default function Footer() {
               alt="Javep Chevrolet"
               width={256}
               height={80}
-              className="h-16 w-auto brightness-[0.85]"
+              className="h-25 w-auto brightness-[0.85]"
             />
           </div>
 
