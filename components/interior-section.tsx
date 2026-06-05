@@ -5,10 +5,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const interiorImages = [
-  { src: '/images/sonic-dashboard.png', label: 'Painel' },
-  { src: '/images/sonic-seats.png', label: 'Bancos' },
-  { src: '/images/sonic-multimedia.png', label: 'Multimídia' },
-  { src: '/images/sonic-interior.png', label: 'Acabamento' },
+  { src: '/images/sonic-dashboard.png', label: 'Hodômetro Digital' },
+  { src: '/images/sonic-seats.png', label: 'Painel' },
+  { src: '/images/sonic-multimedia.png', label: 'Visão Aerea' },
+  { src: '/images/sonic-interior.png', label: 'Traseira' },
 ]
 
 export default function InteriorSection() {
