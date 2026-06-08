@@ -16,7 +16,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/sonic-wheel.png"
+          src="/images/sonic-front.png"
           alt="Novo Chevrolet Sonic"
           fill
           className="object-cover object-right"
