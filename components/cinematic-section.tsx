@@ -31,7 +31,7 @@ export default function CinematicSection() {
           className="absolute inset-0 z-0"
         >
           <Image
-            src="/images/sonic-cinematic.png"
+            src="/images/sonic-trunk.png"
             alt="Chevrolet Sonic em movimento"
             fill
             className="object-cover object-center"
