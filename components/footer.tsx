@@ -57,6 +57,21 @@ export default function Footer() {
             <span className="text-sm">@chevroletjavep</span>
           </Link>
 
+          <div style={{color: "#ffffff",
+  fontSize: "18px",
+  fontWeight: "bold",
+  textAlign: "center",
+  padding: "15px",
+  backgroundColor: "#1a1a1a",
+  borderRadius: "12px",
+  border: "1px solid #333",
+  boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+  letterSpacing: "0.5px",
+  lineHeight: "1.5",}}>
+            Nossas Localizações!
+          </div>
+          <br />
+
           {/* MAPA COM LISTA LATERAL */}
           <div className="w-full max-w-5xl flex gap-6 mb-8">
             {/* LISTA LATERAL */}
