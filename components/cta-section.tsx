@@ -1,33 +1,45 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import LeadModal from './lead-modal'
 
 const WHATSAPP_NUMBER = '551421047005'
 
 const ctaButtons = [
   {
     label: 'AVALIAR MEU USADO',
-    message: 'Olá Bryan, gostaria de avaliar meu veículo para uma possível troca no Novo Chevrolet Sonic.',
+    message:
+      'Olá Bryan, gostaria de avaliar meu veículo para uma possível troca no Novo Chevrolet Sonic.',
     variant: 'primary' as const,
   },
   {
     label: 'CONDIÇÕES DE PAGAMENTO',
-    message: 'Olá Bryan, gostaria de saber mais sobre as formas de pagamento do Novo Chevrolet Sonic.',
+    message:
+      'Olá Bryan, gostaria de saber mais sobre as formas de pagamento do Novo Chevrolet Sonic.',
     variant: 'secondary' as const,
   },
   {
     label: 'AGENDAR TEST-DRIVE',
-    message: 'Olá Bryan, gostaria de agendar um test-drive do Novo Chevrolet Sonic.',
+    message:
+      'Olá Bryan, gostaria de agendar um test-drive do Novo Chevrolet Sonic.',
     variant: 'secondary' as const,
   },
 ]
 
 export default function CTASection() {
+  const [showModal, setShowModal] = useState(false)
+
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden">
+      <LeadModal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+      />
+
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -51,8 +63,11 @@ export default function CTASection() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-background tracking-tight mb-6">
               Gostou do Novo Chevrolet Sonic?
             </h2>
+
             <p className="text-lg text-background/80 mb-10">
-              Solicite uma avaliação do seu usado, conheça as condições disponíveis ou agende um test-drive.
+              Solicite uma avaliação do seu usado, conheça as condições disponíveis,
+              agende um test-drive ou deixe seus dados para receber informações
+              exclusivas.
             </p>
           </motion.div>
 
@@ -64,8 +79,10 @@ export default function CTASection() {
             className="flex flex-col sm:flex-row flex-wrap gap-4"
           >
             {ctaButtons.map((button) => {
-              const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(button.message)}`
-              
+              const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                button.message
+              )}`
+
               return (
                 <Link
                   key={button.label}
@@ -83,6 +100,14 @@ export default function CTASection() {
                 </Link>
               )
             })}
+
+            <button
+              onClick={() => setShowModal(true)}
+              className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-sm font-semibold transition-all hover:scale-105 bg-primary text-primary-foreground hover:bg-primary/90"
+            >
+               TENHO INTERESSE
+              <ArrowRight size={16} />
+            </button>
           </motion.div>
         </div>
       </div>
