@@ -10,6 +10,7 @@ import CTASection from '@/components/cta-section'
 import ContactSection from '@/components/contact-section'
 import FloatingWhatsApp from '@/components/floating-whatsapp'
 import Footer from '@/components/footer'
+import LeadPopup from '@/components/lead-popup'
 
 export default function HomePage() {
   return (
@@ -26,6 +27,7 @@ export default function HomePage() {
       <ContactSection />
       <Footer />
       <FloatingWhatsApp />
+      <LeadPopup />
     </main>
   )
 }
