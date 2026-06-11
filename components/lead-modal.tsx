@@ -1,5 +1,6 @@
 'use client'
 
+import { input } from 'framer-motion/client'
 import { useState } from 'react'
 
 interface LeadModalProps {
@@ -127,15 +128,31 @@ export default function LeadModal({
               name="Email"
               placeholder="Seu e-mail"
               required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               className="w-full rounded-xl border p-3"
             />
 
             <input
               type="tel"
               name="Celular"
-              placeholder="WhatsApp"
+              placeholder="(14) 99999-9999"
               required
-              className="w-full rounded-xl border p-3"
+              maxLength={15}
+              pattern="\(\d{2}\)\s\d{5}-\d{4}"
+              title="Digite um WhatsApp válido no formato (14) 99999-9999"
+              onInput={(e) => {
+                let value = e.currentTarget.value.replace(/\D/g, '')
+
+                if (value.length > 11) {
+                  value = value.slice(0, 11)
+                }
+
+                value = value.replace(/^(\d{2})(\d)/g, '($1) $2')
+                value = value.replace(/(\d{5})(\d)/, '$1-$2')
+
+                e.currentTarget.value = value
+              }}
+              className="w-full rounded-xl border p-3 transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/30 outline-none"
             />
 
             <button
